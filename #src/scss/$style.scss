@@ -1,0 +1,131 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap);
+
+//<Иконочные шрифты>==========================================================================================
+
+
+//<Шрифт по умолчанию>==========================================================================================
+$fontFamily: "Montserrat";
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1184;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	color: #000;
+	font-size: 14px;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	min-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+// @import "forms";
+// @import "ui";
+
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	flex: 1 1 auto;
+}
+.container {
+}
+.gradient{
+	background: rgb(255,191,95);
+	background: linear-gradient(100deg, rgba(255,191,95,1) 39%, rgba(162,77,191,1) 100%);
+}
+.main-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+		// .main-header__logo
+		&__logo {
+			margin: 55px 0px 0px 0px;
+		}
+		// .main-header__widget
+		&__widget {
+		}
+}
+.main-navigation {
+	flex: 1 1 auto;
+	max-width: 400px;
+		// .main-navigation__list
+		&__list {
+			margin: 100px 0px 0px 0px;
+			display: flex;
+			justify-content: space-between;
+			font-family: Montserrat;
+			font-size: 15px;
+			
+		}
+}
+.menu-item {
+	margin: 0px 20px 0px 20px;
+	text-decoration: none;
+
+	a {
+		color: #000;
+	}
+}
+.widget-contacts {
+		margin: 100px 0px 0px 0px;
+		// .widget-contacts__logo
+		&__logo {}
+		// .widget-contacts__phone
+		&__phone {
+			font-family: Montserrat;
+			font-size: 15px;
+		}
+}
+.intro {
+	// .intro__slogan
+	&__slogan {}
+	// .intro__title
+	&__title {}
+	// .intro__service-btn
+	&__service-btn {}
+	// .intro__banner
+	&__banner {}
+}
+.service-btn {
+	// .service-btn__title
+	&__title {}
+}
+

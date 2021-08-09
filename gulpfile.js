@@ -40,7 +40,7 @@ const path = {
         html: [src_folder + "/*.html", "!" + src_folder + "/_*.html"],
         js: src_folder + "/js/main.js",
         jquery: src_folder + "/js/_*.js",
-        css: [src_folder + "/scss/$style.scss", src_folder + "/scss/swiper.scss"],
+        css: [src_folder + "/scss/$style.scss"],
         images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}", "!**/favicon.*"],
         fonts: src_folder + "/fonts/*.ttf"
     },
