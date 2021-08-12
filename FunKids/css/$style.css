@@ -211,9 +211,6 @@ body._lock {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   margin: 0px 0px 355px 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .intro__slogan {
@@ -592,6 +589,9 @@ body._lock {
 
   .intro {
     margin: 0px 0px 440px 0px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .intro__slogan {
