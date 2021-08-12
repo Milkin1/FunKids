@@ -118,7 +118,7 @@ body._lock {
   max-width: 1184px;
   margin: 0 auto;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .page {
@@ -155,9 +155,10 @@ body._lock {
 }
 
 .main-header__logo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  margin: 0px 200px 0px 0px;
 }
 
 .main-navigation {
@@ -319,9 +320,7 @@ body._lock {
 }
 
 .why__pic {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  text-align: center;
   margin: 0px 0px 55px 0px;
 }
 
@@ -356,6 +355,7 @@ body._lock {
 @media (max-width: 1196px) {
   .container {
     max-width: 970px;
+    padding: 0 20px;
   }
 }
 
@@ -372,14 +372,33 @@ body._lock {
 }
 
 @media (max-width: 1024px) {
+  .main-header__logo {
+    margin: 0px 100px 0px 0px;
+  }
+
+  .main-navigation__list :last-child {
+    margin: 0px 40px 0px 0px;
+  }
+
+  .menu-item {
+    margin: 0px 15px 0px 0px;
+  }
+
   .intro {
     margin: 0px 0px 440px 0px;
+  }
+}
+
+@media (max-width: 1024px) and (max-width: 769px) {
+  .main-navigation__list :last-child {
+    margin: 0px 0px 0px 0px;
   }
 }
 
 @media (max-width: 991.98px) {
   .container {
     max-width: 750px;
+    padding: 0 20px;
   }
 }
 
@@ -392,10 +411,10 @@ body._lock {
     display: block;
     width: 40px;
     height: 30px;
-    position: relative;
+    position: absolute;
     z-index: 3;
     right: 60px;
-    top: 7px;
+    top: 95px;
     background: transparent;
   }
 
@@ -508,10 +527,17 @@ body._lock {
   .main-header__logo {
     position: relative;
     left: 50px;
+    top: 50px;
+    z-index: 3;
   }
 
   .menu-item {
     padding: 0 0 50px 0;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .widget-contacts__logo {
+    display: none;
   }
 
   .widget-contacts__phone {
@@ -559,13 +585,14 @@ body._lock {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    text-align: center;
   }
 }
 
 @media (max-width: 767.98px) {
   .container {
     max-width: none;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 

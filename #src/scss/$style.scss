@@ -45,16 +45,18 @@ body {
 	max-width: $maxWidthContainer + px;
 	margin: 0 auto;
 	width: 100%;
-	padding: 0 10px;
+	padding: 0 20px;
 	@media (max-width: $md1+px) {
 		max-width: 970px;
+		padding: 0 20px;
 	}
 	@media (max-width: $md2+px) {
 		max-width: 750px;
+		padding: 0 20px;
 	}
 	@media (max-width: $md3+px) {
 		max-width: none;
-		padding: 0 10px;
+		padding: 0 20px;
 	}
 }
 
@@ -72,10 +74,10 @@ body {
 			display: block;
 			width: 40px;
 			height: 30px;
-			position: relative;
+			position: absolute;
 			z-index: 3;
 			right: 60px;
-			top: 7px;
+			top: 95px;
 			background: transparent;
 			@media (max-width: 426px) {
 				right: 20px;
@@ -139,6 +141,7 @@ body {
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
+				text-align: center;
 			}
 		}
 	
@@ -204,10 +207,16 @@ body {
 	}
 		// .main-header__logo
 		&__logo {
-			flex: 1 1 auto;
+			flex: 0 1 auto;
+			margin: 0px 200px 0px 0px;
+			@media (max-width: 1024px) {
+				margin: 0px 100px 0px 0px;
+			}
 			@media (max-width: 769px) {
 				position: relative;
 				left: 50px;
+				top: 50px;
+				z-index: 3;
 			}
 			@media (max-width: 426px) {
 				position: static;
@@ -232,6 +241,14 @@ body {
 			:last-child{
 				margin: 0px 0px 0px 0px;
 			}
+			@media (max-width: 1024px) {
+				:last-child{
+					margin: 0px 40px 0px 0px;
+					@media (max-width: 769px) {
+						margin: 0px 0px 0px 0px;
+					}
+				}	
+			}
 			a{
 				text-decoration: none;
 				color: #000;
@@ -240,13 +257,20 @@ body {
 }
 .menu-item {
 	margin: 0px 50px 0px 0px;
+	@media (max-width: 1024px) {
+		margin: 0px 15px 0px 0px;
+	}
 	@media (max-width: 769px) {
 		padding: 0 0 50px 0;
+		margin: 0px 0px 0px 0px;
 	}
 }
 .widget-contacts {
 		// .widget-contacts__logo
 		&__logo {
+			@media (max-width: 769px) {
+				display: none;
+			}
 		}
 		// .widget-contacts__phone
 		&__phone {
@@ -383,7 +407,7 @@ body {
 	}
 	// .why__pic
 	&__pic {
-		align-self: center;
+		text-align: center;
 		margin: 0px 0px 55px 0px;
 		@media (max-width: 426px) {
 			transform: scale(0.8);
