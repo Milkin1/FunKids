@@ -39,7 +39,7 @@ const path = {
         //favicon: src_folder + "/img/favicon.{jpg,png,svg,gif,ico,webp}",
         html: [src_folder + "/*.html", "!" + src_folder + "/_*.html"],
         js: src_folder + "/js/main.js",
-        jquery: src_folder + "/js/_*.js",
+        jquery: src_folder + "/js/jquery-3.6.0.min.js",
         css: [src_folder + "/scss/$style.scss"],
         images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}", "!**/favicon.*"],
         fonts: src_folder + "/fonts/*.ttf"

@@ -10,13 +10,15 @@
 </head>
 
 <body>
-    <div class="wrapper _gradient">
+
+    <div class="wrapper">
+        <div class="bg-grad"></div>
         <div class="container">
             <header class="main-header">
                 <a href="#" class="main-header__logo"><img src="img/Logo.png" alt=""></a>
-                <div class="header__burger">
+                <button class="main__burger">
                     <span></span>
-                </div>
+                </button>
                 <nav class="main-navigation">
                     <ul class="main-navigation__list">
                         <li class="menu-item"><a href="#">Главная</a></li>
@@ -24,22 +26,40 @@
                         <li class="menu-item"><a href="#">О Нас</a></li>
                         <li class="menu-item"><a href="#">Галерея</a></li>
                     </ul>
-
+                    <address class="main-header__widget widget-contacts">
+                        <a href="" class="widget-contacts__logo"><img src="img/phone_icon.png" alt=""></a>
+                        <a href="" class="widget-contacts__phone">+38(097)788-61-74</a>
+                    </address>
                 </nav>
-                <address class="main-header__widget widget-contacts">
-                    <a href="" class="widget-contacts__logo"><img src="img/phone_icon.png" alt=""></a>
-                    <a href="" class="widget-contacts__phone">+38(097)788-61-74</a>
-                </address>
             </header>
             <section class="intro">
-                <h2 class="intro__slogan">Ваши впечетления Наш успех</h2>
+                <h2 class="intro__slogan">Ваши впечетления-Наш успех</h2>
+                <h2 class="intro__slogan2">Ваши впечетления</h2>
+                <h2 class="intro__slogan3">Наш успех</h2>
                 <p class="intro__title">Компания по организацим детских праздников и мероприятий в Харькове </p>
-                <button class="intro__service-btn service-btn">
-                    <span class="service-btn__title">Посмотреть услуги</span>
-                </button>
+                <button class="intro__service-btn service-btn" type="button">Посмотреть услуги</button>
+            </section>
+            <section class="why">
+                <h2 class="why__title">Почему выбирают нас ?</h2>
+                <div class="why__sub-title">
+                    <div class="why__col">
+                        <a href="" class="why__pic"><img src="../img/secure.jpg" alt=""></a>
+                        <h3 class="why__name">Безопасно</h3>
+                        <p class="why__text">Мы обеспечим полную безопасность вашим детям</p>
+                    </div>
+                    <div class="why__col">
+                        <a href="" class="why__pic"><img src="../img/fast.jpg" alt=""></a>
+                        <h3 class="why__name">Быстро</h3>
+                        <p class="why__text">Вся работа будет выполнена в кратчайшие сроки</p>
+                    </div>
+                    <div class="why__col">
+                        <a href="" class="why__pic"><img src="../img/creativity.jpg" alt=""></a>
+                        <h3 class="why__name">Креативно</h3>
+                        <p class="why__text">Сделаем всё креативно и вам запомнится этот праздник </p>
+                    </div>
+                </div>
             </section>
         </div>
-        <div class="banner"></div>
     </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
