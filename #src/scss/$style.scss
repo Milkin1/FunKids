@@ -174,6 +174,9 @@ body {
 	position: absolute;
 	z-index: -2;
 	background: url(../img/Banner_photo.png) right bottom/750px no-repeat, linear-gradient(to right bottom, #fbba64, #fea271, #f58f81, #e28190, #c6799a);
+	@media (max-width: 2561px) {
+		background: url(../img/Banner_photo.png) 1200px bottom/700px no-repeat, linear-gradient(to right bottom, #fbba64, #fea271, #f58f81, #e28190, #c6799a);
+	}
 	@media (max-width: 1441px) {
 		background: url(../img/Banner_photo.png) right bottom/700px no-repeat, linear-gradient(to right bottom, #fbba64, #fea271, #f58f81, #e28190, #c6799a);
 	}
@@ -352,17 +355,22 @@ body {
 		}
 		// .intro__service-btn
 		&__service-btn {
+			display: inline-flex;
 		}
 }
 .service-btn {
 	@include btn-reset;
 	@include btn-active;
-	width: 250px;
-	background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
-	padding: 21px 26px 21px 26px;
+	background: #fff;
+	padding: 0px 26px 0px 26px;
+	line-height: 59px;
 	border-radius: 35px;
 	font-family: Montserrat;
 	font-weight: 800;
+}
+
+.btn_active{
+	background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
 }
 
 //================Section why==============
@@ -438,3 +446,151 @@ body {
 	}
 }
 
+//================Section Our-services==============
+
+.our-services-bg {
+	background: #E8CCDB;
+	width: 100%;
+	height: 900px;
+	position: relative;
+	z-index: -1;
+
+}
+
+.our-services {
+		// .our-services__title
+		position: relative;
+		&__title {
+			font-family: Montserrat;
+			font-weight: 700;
+			font-size: 35px;
+			margin: 0px 0px 90px 0px;
+			padding: 85px 0px 0px 0px;
+			@media (max-width: 991.99px) {
+				margin: 0px 0px 75px 0px;
+			}
+		}
+		//.our-services__tabs
+		&__tabs {
+			margin: 0px 0px 50px 0px;
+			display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+		}
+		//our-services__swiper-button-prev
+		&__swiper-button-prev{
+			display: flex;
+			border-radius: 50%;
+			background: #fff;
+			&:after{display: none;}
+			@media (max-width: 1197px) {
+				left: -20px!important;
+			}
+		}
+		//our-services__swiper-button-next
+		&__swiper-button-next{
+			display: flex;
+			border-radius: 50%;
+			background: #fff;
+			&:after{display: none;}
+			@media (max-width: 1197px) {
+				right: -20px!important;
+			}
+		}
+		//our-services__swiper-pagination
+		&__swiper-pagination{
+			position: absolute;
+			left: 50%;
+			bottom: 70px!important;
+		}
+		.swiper-button-next, .swiper-button-prev{
+			width: 40px;
+			height: 40px;
+			margin-top: 0;
+			top: 56%;
+			@media (max-width: 991.99px) {
+				top: 63%;
+			}
+		}
+}
+.tabs {
+
+		// .tabs__choose
+		&__choose {
+			@media (max-width: 992px) {
+				margin: 0px 0px 20px 0px;
+			}
+			
+			transition: all 1s ease 0s;
+			:hover{
+				transition: all 1s ease 0s;
+				background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+			}
+			a{
+				display: inline-block;
+				width: 240px;
+				text-align: center;
+				margin: 0px 10px 0px 0px;
+				@media (max-width: 1197px) {
+					width: 190px;
+					font-size: 11px;
+				}
+			}
+		}
+}
+.our-services__swiper-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin: 0px 0px 50px 0px;	
+	height: 500px;
+	max-width: 900px;
+}
+
+.our-services__swiper-wrapper{
+	margin: 0px -50px 0px -50px;
+}
+
+.our-services__swiper-slide {
+		padding: 0px 80px;
+		display: inline-flex;
+		flex-direction: column;
+		@media (max-width: 1197px) {
+			padding: 0px 70px;
+		}
+		@media (max-width: 991.99px) {
+			padding: 0px 115px
+		}
+
+
+		// .our-services__swiper-slide__pic
+		&__pic {
+			img{
+				display: inline-block;
+				max-width: 212%;
+				min-width: 190px;
+			}
+		}
+		// .our-services__swiper-slide__name
+		&__name {
+			font-family: Montserrat;
+			font-weight: 500;
+			background: #fff;
+			width: 150px;
+			height: 30px;
+			border-radius: 0px 0px 23px 23px;
+			text-align: center;
+			position: relative;
+			z-index: -1;
+			top: -7px;
+			padding: 8px 0px 0px 0px;
+			left: 50px;
+			@media (max-width: 619.99px){
+				left: 19px;
+			}
+			@media (max-width: 425.99px) {
+				left: 50px;
+			}
+		}
+}

@@ -38,8 +38,11 @@ const path = {
     src: {
         //favicon: src_folder + "/img/favicon.{jpg,png,svg,gif,ico,webp}",
         html: [src_folder + "/*.html", "!" + src_folder + "/_*.html"],
+        // ==============================files that have to be ignore==================================
+        js_ignore: [src_folder + "/js/jquery-3.6.0.min.js", src_folder + "/js/swiper-bundle.min.js"],
+        css_ignore: [src_folder + "/scss/swiper-bundle.min.css"],
+        // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
         js: src_folder + "/js/main.js",
-        jquery: src_folder + "/js/jquery-3.6.0.min.js",
         css: [src_folder + "/scss/$style.scss"],
         images: [src_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}", "!**/favicon.*"],
         fonts: src_folder + "/fonts/*.ttf"
@@ -101,6 +104,11 @@ function css() {
         .pipe(browserSync.stream());
 }
 
+function css_ignore() {
+    return src(path.src.css_ignore)
+        .pipe(dest(path.build.css))
+}
+
 function scripts() {
     return src(path.src.js)
         .pipe(plumber({
@@ -122,8 +130,8 @@ function scripts() {
         .pipe(browserSync.stream());
 }
 
-function jquery() {
-    return src(path.src.jquery)
+function js_ignore() {
+    return src(path.src.js_ignore)
         .pipe(dest(path.build.js))
 }
 
@@ -225,15 +233,16 @@ function browsersync() {
     })
 }
 
-const build = series(clean, otf, parallel(html, css, scripts, jquery, images), fonts, fontstyle);
+const build = series(clean, otf, parallel(html, css, css_ignore, scripts, js_ignore, images), fonts, fontstyle);
 
 
 
 //=================================export to gulp.task========================
 exports.html = html;
 exports.css = css;
+exports.css_ignore = css_ignore;
 exports.scripts = scripts;
-exports.jquery = jquery;
+exports.js_ignore = js_ignore;
 exports.images = images;
 exports.fonts = fonts;
 exports.otf = otf;

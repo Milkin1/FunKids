@@ -246,6 +246,12 @@ body._lock {
   width: 350px;
 }
 
+.intro__service-btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 .service-btn {
   padding: 0;
   border: none;
@@ -254,11 +260,9 @@ body._lock {
   background-color: transparent;
   cursor: pointer;
   outline: none;
-  width: 250px;
-  background: -webkit-gradient(linear, left top, right top, from(#ffa032), color-stop(#fd9737), color-stop(#f98e3c), color-stop(#f68641), to(#f17e45));
-  background: -o-linear-gradient(left, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
-  background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
-  padding: 21px 26px 21px 26px;
+  background: #fff;
+  padding: 0px 26px 0px 26px;
+  line-height: 59px;
   border-radius: 35px;
   font-family: Montserrat;
   font-weight: 800;
@@ -280,6 +284,12 @@ body._lock {
           transform: translate(1px, 1px);
   -webkit-filter: saturate(150%);
           filter: saturate(150%);
+}
+
+.btn_active {
+  background: -webkit-gradient(linear, left top, right top, from(#ffa032), color-stop(#fd9737), color-stop(#f98e3c), color-stop(#f68641), to(#f17e45));
+  background: -o-linear-gradient(left, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+  background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
 }
 
 .why {
@@ -344,11 +354,181 @@ body._lock {
   text-align: center;
 }
 
+.our-services-bg {
+  background: #E8CCDB;
+  width: 100%;
+  height: 900px;
+  position: relative;
+  z-index: -1;
+}
+
+.our-services {
+  position: relative;
+}
+
+.our-services__title {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 35px;
+  margin: 0px 0px 90px 0px;
+  padding: 85px 0px 0px 0px;
+}
+
+.our-services__tabs {
+  margin: 0px 0px 50px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.our-services__swiper-button-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.our-services__swiper-button-prev:after {
+  display: none;
+}
+
+.our-services__swiper-button-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.our-services__swiper-button-next:after {
+  display: none;
+}
+
+.our-services__swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 70px !important;
+}
+
+.our-services .swiper-button-next,
+.our-services .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  top: 56%;
+}
+
+.tabs__choose {
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+
+.tabs__choose :hover {
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa032), color-stop(#fd9737), color-stop(#f98e3c), color-stop(#f68641), to(#f17e45));
+  background: -o-linear-gradient(left, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+  background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+}
+
+.tabs__choose a {
+  display: inline-block;
+  width: 240px;
+  text-align: center;
+  margin: 0px 10px 0px 0px;
+}
+
+.our-services__swiper-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 0px 0px 50px 0px;
+  height: 500px;
+  max-width: 900px;
+}
+
+.our-services__swiper-wrapper {
+  margin: 0px -50px 0px -50px;
+}
+
+.our-services__swiper-slide {
+  padding: 0px 80px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.our-services__swiper-slide__pic img {
+  display: inline-block;
+  max-width: 212%;
+  min-width: 190px;
+}
+
+.our-services__swiper-slide__name {
+  font-family: Montserrat;
+  font-weight: 500;
+  background: #fff;
+  width: 150px;
+  height: 30px;
+  border-radius: 0px 0px 23px 23px;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+  top: -7px;
+  padding: 8px 0px 0px 0px;
+  left: 50px;
+}
+
+@media (max-width: 2561px) {
+  .bg-grad {
+    background: url(../img/Banner_photo.png) 1200px bottom/700px no-repeat, -webkit-gradient(linear, left top, right bottom, from(#fbba64), color-stop(#fea271), color-stop(#f58f81), color-stop(#e28190), to(#c6799a));
+    background: url(../img/Banner_photo.png) 1200px bottom/700px no-repeat, -o-linear-gradient(left top, #fbba64, #fea271, #f58f81, #e28190, #c6799a);
+    background: url(../img/Banner_photo.png) 1200px bottom/700px no-repeat, linear-gradient(to right bottom, #fbba64, #fea271, #f58f81, #e28190, #c6799a);
+  }
+}
+
 @media (max-width: 1441px) {
   .bg-grad {
     background: url(../img/Banner_photo.png) right bottom/700px no-repeat, -webkit-gradient(linear, left top, right bottom, from(#fbba64), color-stop(#fea271), color-stop(#f58f81), color-stop(#e28190), to(#c6799a));
     background: url(../img/Banner_photo.png) right bottom/700px no-repeat, -o-linear-gradient(left top, #fbba64, #fea271, #f58f81, #e28190, #c6799a);
     background: url(../img/Banner_photo.png) right bottom/700px no-repeat, linear-gradient(to right bottom, #fbba64, #fea271, #f58f81, #e28190, #c6799a);
+  }
+}
+
+@media (max-width: 1197px) {
+  .our-services__swiper-button-prev {
+    left: -20px !important;
+  }
+
+  .our-services__swiper-button-next {
+    right: -20px !important;
+  }
+
+  .tabs__choose a {
+    width: 190px;
+    font-size: 11px;
+  }
+
+  .our-services__swiper-slide {
+    padding: 0px 70px;
   }
 }
 
@@ -395,10 +575,31 @@ body._lock {
   }
 }
 
+@media (max-width: 992px) {
+  .tabs__choose {
+    margin: 0px 0px 20px 0px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .container {
     max-width: 750px;
     padding: 0 20px;
+  }
+}
+
+@media (max-width: 991.99px) {
+  .our-services__title {
+    margin: 0px 0px 75px 0px;
+  }
+
+  .our-services .swiper-button-next,
+  .our-services .swiper-button-prev {
+    top: 63%;
+  }
+
+  .our-services__swiper-slide {
+    padding: 0px 115px;
   }
 }
 
@@ -596,6 +797,12 @@ body._lock {
   }
 }
 
+@media (max-width: 619.99px) {
+  .our-services__swiper-slide__name {
+    left: 19px;
+  }
+}
+
 @media (max-width: 426px) {
   .bg-grad {
     background: url(../img/Banner_photo.png) right bottom/380px no-repeat, -webkit-gradient(linear, left top, right bottom, from(#fbba64), color-stop(#fea271), color-stop(#f58f81), color-stop(#e28190), to(#c6799a));
@@ -654,6 +861,12 @@ body._lock {
   }
 }
 
+@media (max-width: 425.99px) {
+  .our-services__swiper-slide__name {
+    left: 50px;
+  }
+}
+
 @media (max-width: 321px) {
   .bg-grad {
     background: url(../img/Banner_photo.png) right bottom/320px no-repeat, -webkit-gradient(linear, left top, right bottom, from(#fbba64), color-stop(#fea271), color-stop(#f58f81), color-stop(#e28190), to(#c6799a));
@@ -687,6 +900,18 @@ body._lock {
 ._webp .bg-grad{ background: url(../img/Banner_photo.webp) right bottom/750px no-repeat, -o-linear-gradient(left top, #fbba64, #fea271, #f58f81, #e28190, #c6799a); }
 
 ._webp .bg-grad{ background: url(../img/Banner_photo.webp) right bottom/750px no-repeat, linear-gradient(to right bottom, #fbba64, #fea271, #f58f81, #e28190, #c6799a); }
+
+@media (max-width: 2561px){
+  ._webp .bg-grad{ background: url(../img/Banner_photo.webp) 1200px bottom/700px no-repeat, -webkit-gradient(linear, left top, right bottom, from(#fbba64), color-stop(#fea271), color-stop(#f58f81), color-stop(#e28190), to(#c6799a)); }
+}
+
+@media (max-width: 2561px){
+  ._webp .bg-grad{ background: url(../img/Banner_photo.webp) 1200px bottom/700px no-repeat, -o-linear-gradient(left top, #fbba64, #fea271, #f58f81, #e28190, #c6799a); }
+}
+
+@media (max-width: 2561px){
+  ._webp .bg-grad{ background: url(../img/Banner_photo.webp) 1200px bottom/700px no-repeat, linear-gradient(to right bottom, #fbba64, #fea271, #f58f81, #e28190, #c6799a); }
+}
 
 @media (max-width: 1441px){
   ._webp .bg-grad{ background: url(../img/Banner_photo.webp) right bottom/700px no-repeat, -webkit-gradient(linear, left top, right bottom, from(#fbba64), color-stop(#fea271), color-stop(#f58f81), color-stop(#e28190), to(#c6799a)); }
