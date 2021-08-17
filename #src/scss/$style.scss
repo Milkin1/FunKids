@@ -13,6 +13,7 @@
 $fontFamily: "Montserrat";
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
+
 $minWidth: 320;
 $maxWidth: 1920;
 $maxWidthContainer: 1184;
@@ -586,6 +587,7 @@ body {
 			top: -7px;
 			padding: 8px 0px 0px 0px;
 			left: 50px;
+			color: #000;
 			@media (max-width: 619.99px){
 				left: 19px;
 			}
@@ -594,3 +596,50 @@ body {
 			}
 		}
 }
+
+//==========================Our Photos==========================
+.our-photos {
+	// .our-photos__title
+	margin: 0px 0px 50px 0px;
+	&__title {
+		font-family: Montserrat;
+		font-weight: 700;
+		font-size: 35px;
+	}
+	// .our-photos__gallery
+	&__gallery {
+		width: 1144px;
+		height: 736px;
+		display: grid;
+		grid-template-columns: repeat(4, 286px);
+		grid-template-rows: repeat(4, 184px);
+	}
+	&__img1{
+		grid-area: 1/1/2/3;
+	}
+	&__img2{
+		grid-area: 1/3/3/4;
+		margin-left: -15px;
+	}
+	&__img3{
+		grid-area: 1/4/3/5;
+		margin-left: 16px;
+	}
+	&__img4{
+		grid-area: 2/1/5/3;
+		margin-top: 53px;
+	}
+	&__img5{
+		grid-area: 3/3/5/5;
+	}
+	// .our-photos__img
+	&__img {
+		img{
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
