@@ -626,8 +626,6 @@ body._lock {
 
 .bg-form {
   background: #000;
-  margin-bottom: 100px;
-  padding: 170px 0px 0px 0px;
 }
 
 .flex-container {
@@ -831,7 +829,7 @@ body._lock {
   display: -ms-flexbox;
   display: flex;
   width: 200px;
-  margin: -40px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
 }
 
 .phone__number {
@@ -1369,6 +1367,7 @@ body._lock {
 
   .phone {
     margin-left: calc(153*(100vw - 320px) / (448));
+    margin-top: -35px;
   }
 
   .phone__img {
