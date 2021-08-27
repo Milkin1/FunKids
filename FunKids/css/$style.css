@@ -247,49 +247,46 @@ body._lock {
 }
 
 .intro__service-btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.service-btn {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
+  display: inline-block;
+  text-align: center;
+  width: 209px;
+  position: relative;
   background: #fff;
-  padding: 17px CLAMP(10px, 1.56vw, 30px) 17px CLAMP(10px, 1.56vw, 30px);
+  padding: 27px 0px 27px 0px;
   border-radius: 35px;
   font-family: Montserrat;
   font-weight: 800;
   text-align: center;
+  background: -webkit-gradient(linear, right top, left top, from(#ffa032), color-stop(#fd9737), color-stop(#f98e3c), color-stop(#f68641), to(#f17e45));
+  background: -o-linear-gradient(right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+  background: linear-gradient(to left, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
 }
 
-.service-btn::-moz-focus-outer {
-  border: 0;
-  padding: 0;
+.intro__service-btn a {
+  color: #000;
+  position: relative;
+  z-index: 1;
 }
 
-.service-btn::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-.service-btn:active {
-  -webkit-transform: translate(1px, 1px);
-      -ms-transform: translate(1px, 1px);
-          transform: translate(1px, 1px);
-  -webkit-filter: saturate(150%);
-          filter: saturate(150%);
-}
-
-.btn_active {
+.intro__service-btn:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(#ffa032), color-stop(#fd9737), color-stop(#f98e3c), color-stop(#f68641), to(#f17e45));
   background: -o-linear-gradient(left, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
   background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+  border-radius: 35px;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.intro__service-btn:hover:before {
+  opacity: 1;
 }
 
 .why {
@@ -389,32 +386,63 @@ body._lock {
   display: inline-flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0px 0px 50px 0px;
 }
 
 .tabs__choose {
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 220px;
+  padding: 27px 0px 27px 0px;
+  margin: 0px 15px 15px 0px;
+  position: relative;
+  background: #fff;
+  border-radius: 35px;
+  font-family: Montserrat;
+  font-weight: 800;
+  text-align: center;
+  background: #fff;
 }
 
-.tabs__choose :hover {
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
-  background: -webkit-gradient(linear, left top, right top, from(#ffa032), color-stop(#fd9737), color-stop(#f98e3c), color-stop(#f68641), to(#f17e45));
-  background: -o-linear-gradient(left, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
-  background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+.tabs__choose :last-child {
+  margin: 0px 0px 0px 0px;
 }
 
 .tabs__choose a {
-  display: inline-block;
-  width: CLAMP(180px, 20vw, 250px);
-  text-align: center;
-  margin: 0px 10px 0px 0px;
+  position: relative;
+  z-index: 1;
+  color: #000;
+}
+
+.tabs__choose:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa032), color-stop(#fd9737), color-stop(#f98e3c), color-stop(#f68641), to(#f17e45));
+  background: -o-linear-gradient(left, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+  background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+  border-radius: 35px;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.tabs__choose:hover:before {
+  opacity: 1;
 }
 
 .swiper-button-prev {
@@ -650,7 +678,7 @@ body._lock {
   font-weight: 700;
   font-size: 35px;
   color: #fff;
-  margin: 0px 0px 110px 0px;
+  margin: 80px 0px 110px 0px;
 }
 
 .contact__name {
@@ -739,6 +767,10 @@ body._lock {
   display: block;
 }
 
+.checkbox-label span {
+  padding: 1px 0 0 5px;
+}
+
 .checkbox-label :nth-child(3) {
   text-decoration: none;
   color: #fff;
@@ -756,8 +788,8 @@ body._lock {
 
 :checked + .checkbox__style:before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background: #fff;
   position: absolute;
   left: 50%;
@@ -769,8 +801,8 @@ body._lock {
 
 .checkbox__style {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border: 2px solid #fff;
   left: 30px;
 }
@@ -856,13 +888,6 @@ body._lock {
   }
 }
 
-@media (max-width: 1197px) {
-  .tabs__choose a {
-    width: 190px;
-    font-size: 11px;
-  }
-}
-
 @media (max-width: 1197.99px) {
   .sub-title :nth-child(2) {
     -ms-grid-column-align: start;
@@ -930,12 +955,6 @@ body._lock {
   }
 }
 
-@media (max-width: 992px) {
-  .tabs__choose {
-    margin: 0px 0px 20px 0px;
-  }
-}
-
 @media (max-width: 991.98px) {
   .container {
     max-width: 750px;
@@ -977,6 +996,12 @@ body._lock {
 
   .our-services__title {
     margin: 0px 0px 75px 0px;
+  }
+
+  .our-services__tabs {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .swiper-container {
@@ -1477,6 +1502,12 @@ body._lock {
   }
 }
 
+@media (max-width: 509.99px) {
+  .our-services-bg {
+    height: 1030px;
+  }
+}
+
 @media (max-width: 493.99px) {
   .contact_title {
     font-size: 25px;
@@ -1505,12 +1536,6 @@ body._lock {
   .contact__text {
     font-size: 20px;
     width: 250px;
-  }
-}
-
-@media (max-width: 439.99px) {
-  .our-services-bg {
-    height: 950px;
   }
 }
 

@@ -379,23 +379,40 @@ body {
 		}
 		// .intro__service-btn
 		&__service-btn {
-			display: inline-flex;
+			display: inline-block;
+			text-align: center;
+			width: 209px;
+			position: relative;
+			background: #fff;
+			padding: 27px 0px 27px 0px;
+			border-radius: 35px;
+			font-family: Montserrat;
+			font-weight: 800;
+			text-align: center;
+			background: linear-gradient(to left, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+			a{
+				color: #000;
+				position: relative;
+				z-index: 1;
+			}
+			&:before{
+			content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+				border-radius: 35px;
+				opacity: 0;
+				transition: all 0.4s ease 0s;
+			}
+			&:hover:before{
+				opacity: 1;
+			}
 		}
 }
-.service-btn {
-	@include btn-reset;
-	@include btn-active;
-	background: #fff;
-	padding: 17px CLAMP(10px, 1.56vw, 30px) 17px CLAMP(10px, 1.56vw, 30px);
-	border-radius: 35px;
-	font-family: Montserrat;
-	font-weight: 800;
-	text-align: center;
-}
 
-.btn_active{
-	background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
-}
 
 //================Section why==============
 .why {
@@ -488,8 +505,8 @@ body {
 	@media (max-width: 991.99px) {
 		height: 850px;
 	}
-	@media (max-width: 439.99px) {
-		height: 950px;
+	@media (max-width: 509.99px) {
+		height: 1030px;
 	}
 	@media (max-width: 425.99px) {
 		margin: 0px 0px 30px 0px;
@@ -515,33 +532,52 @@ body {
 			width: 100%;
 			display: inline-flex;
 			flex-wrap: wrap;
-			justify-content: center;
+			justify-content: space-between;
 			margin: 0px 0px 50px 0px;
+			@media (max-width: 991.99px) {
+				justify-content: center;
+			}
 		}
 }
 .tabs {
-
 		// .tabs__choose
 		&__choose {
-			@media (max-width: 992px) {
-				margin: 0px 0px 20px 0px;
-			}
-			
-			transition: all 1s ease 0s;
-			:hover{
-				transition: all 1s ease 0s;
-				background: linear-gradient(to right, #ffa032, #fd9737, #f98e3c, #f68641, #f17e45);
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			width: 220px;
+			padding: 27px 0px 27px 0px;
+			margin: 0px 15px 15px 0px;
+			position: relative;
+			background: #fff;
+			border-radius: 35px;
+			font-family: Montserrat;
+			font-weight: 800;
+			text-align: center;
+			background: #fff;
+			:last-child{
+				margin: 0px 0px 0px 0px;
 			}
 			a{
-				display: inline-block;
-				width: CLAMP(180px, 20vw, 250px);
-				text-align: center;
-				margin: 0px 10px 0px 0px;
-				@media (max-width: 1197px) {
-					width: 190px;
-					font-size: 11px;
-				}
+				position: relative;
+				z-index: 1;
+				color: #000;
 			}
+			&:before{
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(to right, #ffa032, #fd9737,#f98e3c, #f68641, #f17e45);
+				border-radius: 35px;
+				opacity: 0;
+				transition: all 0.4s ease 0s;
+			}
+				&:hover:before{
+					opacity: 1;
+				}
 		}
 }
 
@@ -843,7 +879,7 @@ body {
 			font-weight: 700;
 			font-size: 35px;
 			color: #fff;
-			margin: 0px 0px 110px 0px;
+			margin: 80px 0px 110px 0px;
 			@media (max-width: 991.99px) {
 				text-align: center;
 				margin: 60px 0px 60px 0px;
@@ -1001,6 +1037,9 @@ body {
 .checkbox-label{
 	margin: 40px 0px 50px 25px;
 	display: block;
+	span{
+		padding: 1px 0 0 5px;
+	}
 	&+ .checkbox-label{
 		@media (max-width: 991.99px) {
 			margin: 0px 0px 50px 25px;
@@ -1023,8 +1062,8 @@ body {
 	padding-left: 20px;
 	:checked + &__style:before{
 		content: "";
-		width: 6px;
-		height: 6px;
+		width: 8px;
+		height: 8px;
 		background: #fff;
 		position: absolute;
 		left: 50%;
@@ -1034,8 +1073,8 @@ body {
 		// .checkbox__style
 		&__style {
 			position: absolute;
-			width: 12px;
-			height: 12px;
+			width: 16px;
+			height: 16px;
 			border: 2px solid #fff;
 			left: 30px;
 		}
