@@ -164,9 +164,8 @@ body._lock {
   width: 885px;
   height: 616px;
   position: absolute;
-  margin: 0px 0px 61px 0px;
-  bottom: 0;
-  right: -301px;
+  top: 280px;
+  right: -300px;
   z-index: -1;
   -webkit-transform: scale(0.7);
       -ms-transform: scale(0.7);
@@ -1563,7 +1562,7 @@ body._lock {
 
 @media (max-width: 500.99px) {
   ._container-height {
-    height: 720px;
+    height: 520px;
   }
 
   .bg-grad {
@@ -1574,8 +1573,8 @@ body._lock {
     -webkit-transform: scale(0.35);
         -ms-transform: scale(0.35);
             transform: scale(0.35);
-    bottom: -156px;
-    margin: 0px -110px 0px 0px;
+    top: 260px;
+    left: -100px;
   }
 }
 
