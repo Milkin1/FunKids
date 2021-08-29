@@ -173,7 +173,13 @@ body {
 }
 ._container-height{
 	@media (max-width: 500.99px) {
-		height: 520px;
+		height: 640px;
+	}
+	@media (max-width: 488.99px) {
+		height: 630px;
+	}
+	@media (max-width: 320.99px) {
+		height: 550px;
 	}
 }
 .scroll{
@@ -206,42 +212,57 @@ body {
 	position: absolute;
 	z-index: -2;
 	background: linear-gradient(to right bottom, #fbba64, #fea271, #f58f81, #e28190, #c6799a);
-	@media (max-width: 500.99px) {
-		height: 674px;
+	@media (max-width: 576.99px) {
+		height: 932px;
+	}
+	@media (max-width: 501.99px) {
+		@include dynamic-value("height", 694, 820, 694, 501, 320)
 	}
 }
 
 .bg-banner{
-	width: 885px;
-	height: 616px;
+	position: relative;
+}
+.banner_bg{
 	position: absolute;
-	top: 280px;
-    right: -300px;
-	z-index: -1;
-	transform: scale(0.7);
-	background: url(../img/Banner_photo.png);
+	width: 100%;
+	height: 100%;
+	left: 521px;
+	top: 246px;
 	@media (max-width: 1196.99px) {
-		transform: scale(0.6);
-		margin: 0px 0px 29px 0px;
+		left: 505px;
+		top: 414px;
+	}
+	@media (max-width: 991.99px) {
+		left: 247px;
+		top: 383px;
 	}
 	@media (max-width: 769.99px) {
-		margin: 0px 0px 15px 0px;
+		left: 136px;
+		@include dynamic-value("left", 0, 150, 0, 769.99, 623.99);
+		margin-left: 3px;
 	}
-	@media (max-width: 617.99px) {
-		margin: 0px 0px 50px 0px;
-		right: -177px;
+	@media (max-width: 577.99px) {
+		@include dynamic-value("left", 0, -48, -38, 577.99, 320.99);
+		@include dynamic-value("top", 570, 515, 570, 577.99, 502.99);
 	}
-	@media (max-width: 500.99px) {
-		transform: scale(0.35);
-		top: 260px;
-		left: -100px;
+	@media (max-width: 501.99px) {
+		top: 460px;
 	}
-	@media (max-width: 425.99px) {
-		margin: 0px 0px 0px 0px;
-		left: -173px;
+	@media (max-width: 395.99px) {
+		top: 464px;
 	}
-	@media (max-width: 320.99px) {
-		left: -278px;
+	img{
+		width: 801px;
+		@media (max-width: 1196.99px) {
+			width: 558px;
+		}
+		@media (max-width: 991.99px) {
+			width: 603px;
+		}
+		@media (max-width: 577.99px) {
+			@include dynamic-value("width",331, 603, 330, 577.99, 320.99);
+		}
 	}
 }
 
@@ -1204,7 +1225,7 @@ body {
 	font-size: 15px;
 	padding: 30px 0px 0px 0px;
 	@media (max-width: 768.99px) {
-		@include dynamic-value("margin-left", 153, 0, 768, 320);
+		@include dynamic-value("margin-left", 0, 153, 0, 768, 320);
 		margin-top: 25px;
 		font-size: 10px;
 	}
@@ -1214,7 +1235,7 @@ body {
 	width: 200px;
 	margin: 30px 0px 0px 0px;
 	@media (max-width: 768.99px) {
-		@include dynamic-value("margin-left", 153, 0, 768, 320);
+		@include dynamic-value("margin-left", 0, 153, 0, 768, 320);
 		margin-top: -35px;
 	}
 		// .phone__img

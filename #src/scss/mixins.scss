@@ -80,6 +80,6 @@
 }
 
 //Динамическое свойство
-@mixin dynamic-value($property, $maxSize, $minSize, $maxVwWidth, $minVwWidth){
-	#{$property}: calc(#{$maxSize - $minSize}*(100vw - #{$minVwWidth + px}) / (#{$maxVwWidth - $minVwWidth}))
+@mixin dynamic-value($property, $addSize, $maxSize, $minSize, $maxVwWidth, $minVwWidth){
+	#{$property}: calc(#{$addSize + px} + #{$maxSize - $minSize}*(100vw - #{$minVwWidth + px}) / (#{$maxVwWidth - $minVwWidth}))
 }

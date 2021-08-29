@@ -48,37 +48,6 @@ const swiper = new Swiper('.swiper-container', {
 });
 
 
-// //window.scrollTo(x,y)
-// var scrolled;
-// var timer;
-
-// document.getElementById('scroll').onclick = function () {
-//     scrolled = window.pageYOffset;
-//     //window.scrollTo(0,0);
-//     scrollToTop();
-// }
-// function scrollToTop() {
-//     if (scrolled > 0) {
-//         window.scrollTo(0, scrolled);
-//         scrolled = scrolled - 300; //100 - скорость прокрутки
-//         timer = setTimeout(scrollToTop, 30);
-//     }
-//     else {
-//         clearTimeout(timer);
-//         window.scrollTo(0, 0);
-//     }
-// }
-// window.onscroll = function () { scrollFunction() }
-// function scrollFunction() {
-//     if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-//         document.getElementById("scroll").style.opacity = 1
-//     }
-//     else {
-//         document.getElementById("scroll").style.opacity = 0
-//     }
-// }
-
-
 
 var scrollToTopBtn = document.querySelector(".scroll")
 var rootElement = document.documentElement
@@ -104,3 +73,17 @@ function scrollToTop() {
 }
 scrollToTopBtn.addEventListener("click", scrollToTop)
 document.addEventListener("scroll", handleScroll)
+
+
+
+function ibg() {
+
+    let ibg = document.querySelectorAll(".ibg");
+    for (var i = 0; i < ibg.length; i++) {
+        if (ibg[i].querySelector('img')) {
+            ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+        }
+    }
+}
+
+ibg();
