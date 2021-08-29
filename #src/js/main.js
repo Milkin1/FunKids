@@ -48,32 +48,59 @@ const swiper = new Swiper('.swiper-container', {
 });
 
 
-//window.scrollTo(x,y)
-var scrolled;
-var timer;
+// //window.scrollTo(x,y)
+// var scrolled;
+// var timer;
 
-document.getElementById('scroll').onclick = function () {
-    scrolled = window.pageYOffset;
-    //window.scrollTo(0,0);
-    scrollToTop();
+// document.getElementById('scroll').onclick = function () {
+//     scrolled = window.pageYOffset;
+//     //window.scrollTo(0,0);
+//     scrollToTop();
+// }
+// function scrollToTop() {
+//     if (scrolled > 0) {
+//         window.scrollTo(0, scrolled);
+//         scrolled = scrolled - 300; //100 - скорость прокрутки
+//         timer = setTimeout(scrollToTop, 30);
+//     }
+//     else {
+//         clearTimeout(timer);
+//         window.scrollTo(0, 0);
+//     }
+// }
+// window.onscroll = function () { scrollFunction() }
+// function scrollFunction() {
+//     if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+//         document.getElementById("scroll").style.opacity = 1
+//     }
+//     else {
+//         document.getElementById("scroll").style.opacity = 0
+//     }
+// }
+
+
+
+var scrollToTopBtn = document.querySelector(".scroll")
+var rootElement = document.documentElement
+
+function handleScroll() {
+    // Do something on scroll
+    var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+    if ((rootElement.scrollTop / scrollTotal) > 0.20) {
+        // Show button
+        scrollToTopBtn.classList.add("showBtn")
+    } else {
+        // Hide button
+        scrollToTopBtn.classList.remove("showBtn")
+    }
 }
+
 function scrollToTop() {
-    if (scrolled > 0) {
-        window.scrollTo(0, scrolled);
-        scrolled = scrolled - 300; //100 - скорость прокрутки
-        timer = setTimeout(scrollToTop, 30);
-    }
-    else {
-        clearTimeout(timer);
-        window.scrollTo(0, 0);
-    }
+    // Scroll to top logic
+    rootElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
 }
-window.onscroll = function () { scrollFunction() }
-function scrollFunction() {
-    if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
-        document.getElementById("scroll").style.opacity = 1
-    }
-    else {
-        document.getElementById("scroll").style.opacity = 0
-    }
-}
+scrollToTopBtn.addEventListener("click", scrollToTop)
+document.addEventListener("scroll", handleScroll)
