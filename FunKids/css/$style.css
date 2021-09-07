@@ -222,6 +222,10 @@ body._lock {
   margin: 36px 0px 0px 0px;
 }
 
+.main-navigation address {
+  margin: 15px 0px 0px 0px;
+}
+
 .main-navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
